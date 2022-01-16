@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}New Story Form{% endblock %}
+{% block content%}
+<h2>{{title}} Madlib Template</h2>
+<form action="/{{phrase}}/story">
+    <div class="flex-container">
+    {% for prompt in prompts %}
+    <div class="flex-box">
+        <div class="flex-item">
+            <label for="prompt">
+                {{prompt}}:
+            </label>
+        </div>
+        <div class="flex-item">
+            <input type="text" name="{{prompt}}" id="">
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+    <button>Submit</button>
+</form>
+{% endblock %}

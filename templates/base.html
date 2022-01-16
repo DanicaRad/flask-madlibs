@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/app.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="navbar">
+        <button class="dropdown">Choose your story</button>
+        <a href="/">Home</a>
+        <div class="dropdown-content">
+            <a href="/once_upon">Once Upon A Time</a>
+            <a href="/mad_bunch">Mad Bunch</a>
+            <a href="/mad_island">Mad Island</a>
+            <a href="/mad_turtle">Mad Turtle</a>
+            <a href="/mad_busters">Mad Busters</a>
+        </div>
+    </div>
+    <main id="content">
+        {% block content %} {% endblock %}
+    </main>
+    
+</body>
+</html>
